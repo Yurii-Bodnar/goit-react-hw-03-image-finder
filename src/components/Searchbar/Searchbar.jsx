@@ -4,19 +4,9 @@ import './../../styles.css';
 
 class Searchbar extends Component {
   state = {
-    // page: 1,
-    // images:[],
-    // q:'',
     imagesName:'',
   };
-//   ApiKey = "29465886-f70572c8b9c11640077f8b34a";
-//    componentDidMount() {
-//     fetch(
-//       `https://pixabay.com/api/?q=${this.state.q}&page=${this.state.page}&key=${this.ApiKey}&image_type=photo&orientation=horizontal&per_page=${this.state.perPage}`
-//     )
-//       .then(res => res.json())
-//       .then(image => this.setState({image}));
-//   }
+
   handleSearch = (e) => {
     this.setState({imagesName:e.currentTarget.value.toLowerCase()})
   }
@@ -45,8 +35,6 @@ class Searchbar extends Component {
             name='imagesName'
             value={this.state.imagesName}
             type="text"
-            // autoComplete="off"
-            // autoFocus
             placeholder="Search images and photos"
           />
         </form>

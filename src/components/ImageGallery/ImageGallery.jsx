@@ -1,6 +1,7 @@
 import Button from 'components/Button/Button';
 import { Component } from 'react';
 import ImageGalleryItem from './../ImageGalleryItem/ImageGalleryItem';
+import PropTypes from 'prop-types';
 
 import Loader from 'components/Loader/Loader';
 import Modal from 'components/Modal/Modal';
@@ -59,6 +60,11 @@ class ImageGallery extends Component {
       </ul>
     );
   }
+}
+
+ImageGallery.propTypes = {
+    imagesName:PropTypes.string.isRequired,
+    page: PropTypes.number,
 }
 
 export default ImageGallery;

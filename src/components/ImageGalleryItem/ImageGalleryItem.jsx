@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const ImageGalleryItem = ({ images, togleModal}) => {
     if(images !== undefined || images.length > 0 ){
         
@@ -9,5 +10,12 @@ const ImageGalleryItem = ({ images, togleModal}) => {
     }
     return ;
 };
+
+ImageGalleryItem.propTypes = {
+    images:PropTypes.arrayOf(PropTypes.shape({
+        webformatURL:PropTypes.string.isRequired,
+        id:PropTypes.number.isRequired,
+    })),
+}
 
 export default ImageGalleryItem;
